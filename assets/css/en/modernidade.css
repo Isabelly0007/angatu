@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+#header{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+.navbar {
+    padding: 50px 0;
+    font-size: 1.5em;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #ffffff !important;
+}
+.navbar-brand p{
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #ccc !important;
+    padding: 10px 0 0 0;
+}
+
+
+
+.main{
+    position: relative;
+    background: url(../../img/modernidade/modernidade.png);
+    min-height: 80vh; 
+    background-size: cover;
+    background-position: center;
+    padding: 280px 0 220px;
+}
+
+
+.section-padding {
+    padding: 50px 0 0 0;
+    background-color: #262736;
+    color: white;
+    font-size: 1.5em;
+    text-align: justify;
+}
+.section-padding h1{
+    font-size: 2.8em;
+    font-weight: bold;
+}
+.section-padding h2{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+@media (min-width: 576px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        font-size: 1em;
+    }
+}
+    
+    
+    .dropdown-menu{
+    max-height: 200px;
+    overflow-y: scroll;
+    }
+    
+.nav-link{
+    position: relative;
+    }
+    .dropdown-menu .dropdown-item:hover{
+        color: #054a83;
+    }
+    
+    .nav-link:hover{
+    /* text-decoration: underline; */
+    /* border-bottom: 2px solid #5187E1; */
+    }
+    .nav-link:hover{
+    color: #2C3238 !important;
+    }
+    .nav-link::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    height: 2px;
+    width: 100%;
+    background-color: #2C3238;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    }
+    .nav-link:hover::after{
+    opacity: 1;
+    }
+    /*
+    .container23 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 100px 50px;
+        padding: 100px 50px;
+    }
+
+    .container23 .card {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 350px; max-width: 100%;
+        height: 300px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 35px 80px #454545;
+        transition: 0.5s;
+    }
+
+    .container23 .card:hover {
+        height: 400px;
+    }
+
+    .container23 .card .imgBx {
+        position: absolute;
+        top: 20px;
+        width: 347px; max-width: 100%;
+        height: 220px;
+        background: rgb(0, 0, 0);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .container23 .card:hover .imgBx {
+        top: -100px;
+        transform: scale(0.75);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .container23 .card .imgBx img{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .container23 .card .content23{
+        position: absolute;
+        top: 252px;
+        width: 100%;
+        padding: 0 30px;
+        height: 30px;
+        overflow: hidden;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .container23 .card:hover .content23{
+        height: 250px;
+        top: 130px;
+    }
+    .container23 .card .content23 h2{
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--clr);
+    }
+    .container23 .card .content23 p{
+        color:black;
+        font-size: 0.8em;
+    }
+    .container23 .card .content23 a{
+        position: relative;
+        top:15px;
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--clr);
+        color: #fff;
+        font-weight: 509;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+    */
+    .form-area{
+
+        padding-top: 3%;
+
+    }
+
+    .row.single-form{
+
+        box-shadow: 0 2px 20px -5px rgba(221, 221, 221, 0.5);
+
+        background: #262736;
+
+        border-radius: 15px;
+
+    }
+
+   .right{
+
+    padding: 70px 100px;
+
+    position: relative;
+
+    }
+
+ 
+
+    .form-control{
+
+        border: 2px solid #000;
+
+    }
+
+    .right button{
+
+        border: none;
+
+        border-radius: 10px;
+
+        background: #252525;
+
+        width: 180px;
+
+        color: #fff;
+
+        padding: 15px 0;
+
+        display: inline-block;
+
+        font-size: 0.8em;
+
+        margin-top: 20px;
+
+        cursor: pointer;
+
+        box-shadow: 0 2px 20px -5px rgba(221, 221, 221, 0.5);
+
+    }
+
+    .right button:hover{
+
+        background: #244faa;
+
+    }
+
+ 
+
+    @media (max-width: 767px){
+
+        .right{
+
+            padding: 25px;
+
+        }
+
+       
+
+        .right button{
+
+            width: 150px;
+
+            padding: 12px 0;
+
+        }
+
+    }
+  
+
+
+.caixa{
+    width: 540px; max-width: 100%;
+    height: 385px;
+    overflow: hidden;
+    position: relative;
+}
+.caixa img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.caixa:hover img{
+    transform: scale(1.3);
+}
+.caixa1{
+    width: 300px; max-width: 100%;
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+}
+.caixa1 img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.caixa1:hover img{
+    transform: scale(1.3);
+}
+.caixa3{
+    width: 405px; max-width: 100%;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+}
+.caixa3 img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.caixa3:hover img{
+    transform: scale(1.3);
+}
+.caixa2{
+    width: 450px; max-width: 100%;
+    height: 275px;
+    overflow: hidden;
+    position: relative;
+}
+.caixa2 img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.caixa2:hover img{
+    transform: scale(1.3);
+}
+.caixa4{
+    width: 420px; max-width: 100%;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+}
+.caixa4 img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.caixa4:hover img{
+    transform: scale(1.3);
+}
+.container23 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 40px;
+    padding: 100px 20px;
+}
+
+.container23 .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px; max-width: 100%;
+    height: 320px;
+    background: #fff;
+
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 10px 20px 30px #3f416381;
+    transition: 0.5s;
+}
+
+.container23 .card:hover {
+    height: 600px;
+}
+
+.container23 .card .imgBx {
+    position: absolute;
+    top: 10px;
+    width: 349px; max-width: 100%;
+    height: 230px;
+    background: rgba(9, 85, 161, 0.336);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container23 .card:hover .imgBx {
+    top: -100px;
+    transform: scale(0.75);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.233);
+}
+.container23 .card .imgBx img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container23 .card .content{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 50px;
+    overflow: hidden;
+    text-align: justify;
+    transition: 0.5s;
+}
+.container23 .card:hover .content{
+    height: 550px;
+    top: 120px;
+}
+.container23 .card .content h2{
+    font-size: 1.5em;
+    font-weight: 700;
+  
+}
+.container23 .card .content p{
+    color: #000;
+    font-size: 1em;
+    }
+
+    .container23 .card .content a{
+        position: relative;
+        width: 150px;
+        display: inline-block;
+        padding: 12px 15px;
+     
+        color: #fff;
+        font-weight: 509;
+        text-decoration: none;
+        border-radius: 8px;
+    
+    }
+    .container23 .card .content a:hover{
+        background-color: #5d87beb0;
+        color: #fff;
+        transform: translateY(-0.35rem);
+        transition: all 0.5s;
+    }

@@ -1,0 +1,141 @@
+/* Telas de login e cadastro — usa as cores e fontes de tema.css */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.acesso {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 40px 16px;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(66, 146, 191, 0.12) 0%, rgba(38, 39, 54, 0) 60%),
+        var(--fundo);
+}
+
+.acesso-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--serifa);
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.acesso-marca:hover {
+    color: var(--destaque-claro);
+}
+
+.acesso-cartao {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.acesso-cartao:has(.campos-duplos) {
+    max-width: 600px;
+}
+
+.acesso-cartao h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.acesso-sub {
+    margin: 6px 0 28px;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.campos {
+    display: grid;
+    gap: 16px;
+}
+
+.campos-duplos {
+    grid-template-columns: 1fr 1fr;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--texto-suave);
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--linha);
+    background: var(--fundo);
+    color: var(--texto);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 3px rgba(66, 146, 191, 0.2);
+}
+
+.acesso-cartao button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px;
+    border: none;
+    border-radius: 999px;
+    background: var(--destaque);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.acesso-cartao button:hover {
+    background: var(--destaque-claro);
+}
+
+.acesso-alt {
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+.acesso-alt a {
+    color: var(--destaque-claro);
+}
+
+@media (max-width: 560px) {
+    .acesso-cartao {
+        padding: 28px 22px;
+    }
+
+    .campos-duplos {
+        grid-template-columns: 1fr;
+    }
+}

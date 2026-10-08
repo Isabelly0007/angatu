@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Angatu</title>
+    <link rel="stylesheet" href="../assets/css/tema.css">
+    <link rel="stylesheet" href="../assets/css/acesso.css">
+</head>
+<body>
+
+    <main class="acesso">
+        <a class="acesso-marca" href="index.html" title="Voltar ao início">
+            <img src="../assets/img/logo.png" alt="" width="44" height="44"> Angatu
+        </a>
+
+        <!-- Sem back-end: os campos não têm "name", então nada é enviado; o formulário só valida e avança. -->
+        <form class="acesso-cartao" action="login.html">
+            <h1>Criar conta</h1>
+            <p class="acesso-sub">Preencha seus dados para continuar.</p>
+            <div class="campos campos-duplos">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text" required>
+                </div>
+                <div class="campo">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input id="sobrenome" type="text" required>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" type="tel" required>
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" required>
+                </div>
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" required>
+                </div>
+                <div class="campo">
+                    <label for="confirmacao">Confirmação de senha</label>
+                    <input id="confirmacao" type="password" required>
+                </div>
+            </div>
+            <button type="submit">Cadastrar</button>
+            <p class="acesso-alt">Já tem conta? <a href="login.html">Entrar</a></p>
+        </form>
+    </main>
+</body>
+</html>

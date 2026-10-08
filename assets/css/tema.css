@@ -1,0 +1,513 @@
+/*
+ * Tema visual compartilhado por todas as páginas.
+ * É carregado depois do Bootstrap e do CSS de cada página,
+ * então padroniza cores, tipografia, menu, formulários e rodapé.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --fundo: #262736;
+    --superficie: #30313f;
+    --superficie-2: #3a3b49;
+    --texto: #ebebeb;
+    --texto-suave: #b4b5c0;
+    --destaque: #4292bf;
+    --destaque-claro: #6fb3dc;
+    --linha: rgba(235, 235, 235, 0.12);
+    --serifa: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sem-serifa: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+    --raio: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: var(--sem-serifa);
+    -webkit-font-smoothing: antialiased;
+}
+
+body * {
+    font-family: var(--sem-serifa);
+}
+
+h1, h2, h3, h4, h5,
+.navbar-brand p,
+footer .display-5 {
+    font-family: var(--serifa);
+    letter-spacing: 0.01em;
+}
+
+/* textos dentro de títulos (ex.: <strong>) seguem a fonte do título */
+:is(h1, h2, h3, h4, h5) *:not(i):not([class*="fa-"]) {
+    font-family: inherit !important;
+}
+
+::selection {
+    background: var(--destaque);
+    color: #fff;
+}
+
+/* ---------- Menu ---------- */
+
+#header {
+    background: linear-gradient(180deg, rgba(10, 10, 14, 0.85) 0%, rgba(10, 10, 14, 0) 100%);
+}
+
+.navbar {
+    padding: 14px 0;
+    font-size: 1rem;
+}
+
+.navbar-brand,
+.navbar-brand p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--texto) !important;
+}
+
+.navbar-brand img {
+    width: 44px;
+    height: 44px;
+}
+
+.navbar .nav-link {
+    color: var(--texto) !important;
+    font-weight: 500;
+    padding: 8px 14px !important;
+    letter-spacing: 0.02em;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--destaque-claro) !important;
+}
+
+.navbar .nav-link::after {
+    background-color: var(--destaque) !important;
+    height: 1px;
+    left: 14px;
+    width: calc(100% - 28px);
+    bottom: 2px;
+}
+
+.navbar-toggler {
+    border-color: var(--linha);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px var(--destaque);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        margin-top: 12px;
+        padding: 12px;
+        background: var(--superficie);
+        border: 1px solid var(--linha);
+        border-radius: var(--raio);
+    }
+}
+
+.dropdown-menu {
+    min-width: 250px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    font-size: 0.95rem;
+}
+
+.dropdown-item {
+    color: var(--texto);
+    white-space: normal;
+    border-radius: 8px;
+    padding: 8px 12px;
+    line-height: 1.35;
+    font-size: 0.95rem;
+}
+
+.dropdown-item strong {
+    color: var(--destaque);
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover {
+    background: var(--superficie-2);
+    color: var(--destaque-claro);
+}
+
+/* ---------- Banner de cada página ---------- */
+
+.main {
+    min-height: 62vh;
+    padding: 0;
+    background-color: var(--fundo);
+}
+
+.main::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    background: linear-gradient(180deg, rgba(38, 39, 54, 0) 0%, var(--fundo) 100%);
+    pointer-events: none;
+}
+
+@media (max-width: 767.98px) {
+    .main {
+        min-height: 42vh;
+    }
+}
+
+/* ---------- Conteúdo ---------- */
+
+.section-padding {
+    padding: 56px 0 24px;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-size: 1.06rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+@media (min-width: 1200px) {
+    .section-padding > .container {
+        max-width: 1080px;
+    }
+}
+
+.section-padding p {
+    color: rgba(235, 235, 235, 0.86);
+    margin-bottom: 1.1rem;
+}
+
+.section-padding h1 {
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 600;
+    color: var(--texto);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.section-padding h1::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 2px;
+    margin: 20px auto 0;
+    background: var(--destaque);
+}
+
+.section-padding h2 {
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-weight: 600;
+    color: var(--destaque-claro);
+    margin: 1.4rem 0 0.8rem;
+}
+
+.section-padding h3,
+.section-padding h4 {
+    color: var(--destaque-claro);
+}
+
+.section-padding p a,
+.section-padding li a {
+    color: var(--destaque-claro);
+    text-underline-offset: 3px;
+}
+
+.section-padding p a:hover {
+    color: var(--texto);
+}
+
+.section-padding img {
+    max-width: 100%;
+}
+
+/* caixas de imagem com legenda */
+.box,
+.box2,
+.box3 {
+    width: 100%;
+    max-width: 420px;
+    border-radius: var(--raio);
+    border: 1px solid var(--linha);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box:hover,
+.box2:hover,
+.box3:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.box .content h2,
+.box2 .content h2,
+.box3 .content h2 {
+    font-family: var(--sem-serifa);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--texto);
+}
+
+/* cartões de imagem simples (fundo cinza fixo no HTML) */
+.card[style*="4d4c4c"] {
+    background: var(--superficie) !important;
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+    overflow: hidden;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+/* títulos sempre na fonte serifada (algumas páginas definem outra fonte) */
+.section-padding h1,
+.section-padding h2,
+.section-padding h3 {
+    font-family: var(--serifa) !important;
+}
+
+.box .content h2,
+.box2 .content h2,
+.box3 .content h2 {
+    font-family: var(--sem-serifa) !important;
+}
+
+/* Desenvolvedores: cartões das integrantes no tom do tema */
+.card:has(.card__border) {
+    background: var(--superficie) !important;
+    border: 1px solid var(--linha);
+    border-radius: 18px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.card__border,
+.info__border {
+    background: var(--destaque) !important;
+}
+
+.card__perfil,
+.info__perfil {
+    background: var(--superficie-2) !important;
+}
+
+.card__name,
+.info__name {
+    font-family: var(--serifa) !important;
+    color: var(--destaque-claro) !important;
+}
+
+.card__profession,
+.info__profession {
+    color: var(--texto-suave) !important;
+    line-height: 1.6;
+    text-align: center !important;
+}
+
+.info {
+    background: var(--superficie-2) !important;
+}
+
+.info__icon {
+    color: var(--destaque) !important;
+}
+
+/* ---------- Paginação (capítulo anterior / próximo) ---------- */
+
+.pagination {
+    gap: 12px;
+}
+
+.pagination .page-link {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50% !important;
+    background: transparent !important;
+    border: 1px solid var(--linha) !important;
+    color: var(--texto) !important;
+    font-size: 1.3rem;
+    transition: 0.2s;
+}
+
+.pagination .page-link:hover,
+.pagination .page-link:focus {
+    border-color: var(--destaque) !important;
+    color: var(--destaque-claro) !important;
+    box-shadow: none;
+}
+
+/* ---------- Formulários (comentário / fale conosco) ---------- */
+
+.form-area {
+    padding: 24px 12px 0;
+}
+
+.row.single-form {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--superficie);
+    border: 1px solid var(--linha);
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.single-form > [class*="col-"] {
+    width: 100%;
+}
+
+.right {
+    padding: 48px 56px;
+    color: var(--texto);
+}
+
+.right h2 {
+    font-size: 2rem;
+    color: var(--texto);
+}
+
+.form-label {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-control {
+    background: var(--fundo);
+    border: 1px solid var(--linha);
+    border-radius: 10px;
+    color: var(--texto);
+    padding: 12px 14px;
+}
+
+.form-control:focus {
+    background: var(--fundo);
+    color: var(--texto);
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 3px rgba(66, 146, 191, 0.2);
+}
+
+textarea.form-control {
+    min-height: 130px;
+}
+
+.right button,
+.btn-primary {
+    background: var(--destaque);
+    border: none;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 32px;
+    width: auto;
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+.right button:hover,
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--destaque-claro);
+    color: #fff;
+}
+
+@media (max-width: 767.98px) {
+    .right {
+        padding: 28px 22px;
+    }
+}
+
+/* ---------- Rodapé ---------- */
+
+footer.bg-dark {
+    background: #212529 !important;
+    border-top: 1px solid var(--linha);
+}
+
+footer .display-5 {
+    font-size: 2.4rem;
+    color: var(--texto);
+}
+
+footer small {
+    display: block;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ---------- Ajustes para telas pequenas ---------- */
+
+/* Livro: cartões em grade não podem ficar mais largos que a tela */
+.container__card,
+.card__container {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
+}
+
+.card__container > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.card__article {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 767.98px) {
+    /* Filmes: "Outros filmes" passa de lado a lado para empilhado */
+    .body {
+        flex-direction: column;
+        padding: 24px 0;
+        min-height: 0;
+    }
+
+    .body .imgcontainer,
+    .body .imgcontainer:hover {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .body > [class^="container"] {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-padding {
+        font-size: 1rem;
+    }
+
+    /* cartões com margem lateral fixa que empurrava a página para o lado */
+    .section-padding div.card,
+    .section-padding div.image {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}

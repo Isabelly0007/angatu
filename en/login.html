@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Angatu</title>
+    <link rel="stylesheet" href="../assets/css/tema.css">
+    <link rel="stylesheet" href="../assets/css/acesso.css">
+</head>
+<body>
+
+    <main class="acesso">
+        <a class="acesso-marca" href="index.html" title="Back to home">
+            <img src="../assets/img/logo.png" alt="" width="44" height="44"> Angatu
+        </a>
+
+        <!-- Sem back-end: os campos não têm "name", então nada é enviado; o formulário só valida e avança. -->
+        <form class="acesso-cartao" action="introducao.html">
+            <h1>Log in</h1>
+            <p class="acesso-sub">Sign in to explore the chapters.</p>
+            <div class="campos">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" required>
+                </div>
+                <div class="campo">
+                    <label for="senha">Password</label>
+                    <input id="senha" type="password" required>
+                </div>
+            </div>
+            <button type="submit">Log in</button>
+            <p class="acesso-alt">Don't have an account? <a href="cadastro.html">Sign up</a></p>
+        </form>
+    </main>
+</body>
+</html>

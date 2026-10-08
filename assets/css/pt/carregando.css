@@ -1,0 +1,44 @@
+/* Tela de carregamento exibida antes do login e do cadastro */
+
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ring {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid rgba(235, 230, 220, 0.08);
+    border-top-color: #2b85b9;
+    animation: ring 1s linear infinite;
+}
+
+@keyframes ring {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+span {
+    color: #737373;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    animation: text 2s ease-in-out infinite;
+}
+
+@keyframes text {
+    50% {
+        opacity: 0.35;
+    }
+}
